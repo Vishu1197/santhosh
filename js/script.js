@@ -1,12 +1,11 @@
-const elements = document.querySelectorAll('.fade-in');
+const text = "Santhosh Viren Vijayan";
+let index = 0;
 
-window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        const screen = window.innerHeight;
-
-        if(position < screen - 100){
-            el.classList.add('show');
-        }
-    });
-});
+function typeEffect() {
+    if(index < text.length){
+        document.querySelector(".typing").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeEffect, 80);
+    }
+}
+typeEffect();
