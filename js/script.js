@@ -1,24 +1,10 @@
-// Typing animation
-const text = "Santhosh Viren Vijayan";
-let index = 0;
+const reveals = document.querySelectorAll(".reveal");
 
-function typeEffect() {
-    if (index < text.length) {
-        document.querySelector(".typing").innerHTML += text.charAt(index);
-        index++;
-        setTimeout(typeEffect, 80);
+window.addEventListener("scroll", () => {
+  reveals.forEach(el => {
+    const top = el.getBoundingClientRect().top;
+    if(top < window.innerHeight - 100){
+      el.classList.add("active");
     }
-}
-typeEffect();
-
-// Scroll animation
-const elements = document.querySelectorAll('.fade-in');
-
-window.addEventListener('scroll', () => {
-    elements.forEach(el => {
-        const position = el.getBoundingClientRect().top;
-        if (position < window.innerHeight - 100) {
-            el.classList.add('show');
-        }
-    });
+  });
 });
