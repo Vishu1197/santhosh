@@ -6,12 +6,13 @@
 }
 
 body {
-  background: #0b0b0b;
+  background: #000;
   color: white;
+  overflow-x: hidden;
 }
 
-/* HERO */
-.hero {
+/* PANELS */
+.panel {
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,49 +20,42 @@ body {
   padding: 80px;
 }
 
-.hero-title {
-  font-size: 110px;
+/* COLORS */
+.dark {
+  background: #0b0b0b;
+}
+
+.maroon {
+  background: #800000;
+}
+
+/* HERO */
+.hero h1 {
+  font-size: 90px;
   font-weight: 900;
-  line-height: 0.9;
 }
 
-.hero-title span {
-  color: #800000;
-}
-
-.hero-sub {
-  margin-top: 30px;
-  font-size: 20px;
+.hero p {
+  font-size: 24px;
   opacity: 0.7;
 }
 
-/* SECTION */
-.section {
-  padding: 120px 80px;
-  border-top: 1px solid rgba(255,255,255,0.1);
+/* TEXT */
+.panel h2 {
+  font-size: 60px;
 }
 
-.section h2 {
-  font-size: 40px;
-  margin-bottom: 20px;
-}
-
-.section p {
-  max-width: 600px;
+.panel p {
+  margin-top: 20px;
+  font-size: 20px;
   opacity: 0.7;
 }
 
 /* EXPERIENCE */
 .exp div {
   font-size: 50px;
-  margin: 20px 0;
+  margin: 15px 0;
   opacity: 0.3;
-  transition: 0.3s;
-}
-
-.exp div:hover {
-  opacity: 1;
-  transform: translateX(20px);
 }
 
 /* CONTACT */
@@ -71,10 +65,6 @@ body {
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero-title {
-    font-size: 50px;
-  }
-  .section {
-    padding: 60px 20px;
-  }
+  .hero h1 {font-size: 50px;}
+  .panel h2 {font-size: 35px;}
 }
