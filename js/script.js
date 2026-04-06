@@ -1,42 +1,39 @@
 gsap.registerPlugin(ScrollTrigger);
 
-/* HERO ANIMATION */
-gsap.from(".hero-title", {
-  y: 100,
-  opacity: 0,
-  duration: 1.2,
-  ease: "power3.out"
+/* PIN SCROLL (APPLE EFFECT) */
+const panels = gsap.utils.toArray(".panel");
+
+panels.forEach((panel, i) => {
+  ScrollTrigger.create({
+    trigger: panel,
+    start: "top top",
+    pin: true,
+    pinSpacing: false
+  });
 });
 
-gsap.from(".hero-sub", {
-  y: 50,
-  opacity: 0,
-  delay: 0.3,
-  duration: 1
-});
-
-/* SECTION FADE */
-gsap.utils.toArray(".section").forEach((section) => {
-  gsap.from(section, {
+/* TEXT REVEAL */
+gsap.utils.toArray(".panel h2, .panel p, .panel h1").forEach((el) => {
+  gsap.from(el, {
     opacity: 0,
     y: 80,
     duration: 1,
     scrollTrigger: {
-      trigger: section,
-      start: "top 85%"
+      trigger: el,
+      start: "top 80%"
     }
   });
 });
 
-/* EXPERIENCE TEXT ANIMATION */
-gsap.utils.toArray(".exp div").forEach((el) => {
-  gsap.from(el, {
-    x: -100,
-    opacity: 0,
-    duration: 1,
+/* EXPERIENCE SCROLL ANIMATION */
+gsap.utils.toArray(".exp div").forEach((el, i) => {
+  gsap.to(el, {
+    opacity: 1,
+    x: 50,
     scrollTrigger: {
       trigger: el,
-      start: "top 90%"
+      start: "top 90%",
+      scrub: true
     }
   });
 });
