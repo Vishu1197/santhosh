@@ -6,65 +6,85 @@
 }
 
 body {
-  background: #000;
-  color: white;
-  overflow-x: hidden;
+  background: #fafafa;
+  color: #222;
 }
 
-/* PANELS */
-.panel {
-  height: 100vh;
+/* NAV */
+.nav {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 20px 80px;
+  border-bottom: 1px solid #ddd;
+}
+
+.nav a {
+  margin-left: 20px;
+  text-decoration: none;
+  color: #800000;
+  font-weight: 500;
+}
+
+/* SECTION */
+.section {
   padding: 80px;
 }
 
-/* COLORS */
-.dark {
-  background: #0b0b0b;
-}
-
-.maroon {
-  background: #800000;
-}
-
-/* HERO */
 .hero h1 {
-  font-size: 90px;
-  font-weight: 900;
+  font-size: 40px;
+  color: #800000;
 }
 
 .hero p {
-  font-size: 24px;
-  opacity: 0.7;
-}
-
-/* TEXT */
-.panel h2 {
-  font-size: 60px;
-}
-
-.panel p {
   margin-top: 20px;
-  font-size: 20px;
-  opacity: 0.7;
+  max-width: 600px;
 }
 
-/* EXPERIENCE */
-.exp div {
-  font-size: 50px;
-  margin: 15px 0;
-  opacity: 0.3;
+/* MAP */
+.map {
+  margin-top: 50px;
+  border-left: 3px solid #800000;
+  padding-left: 30px;
+}
+
+.node {
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.dot {
+  width: 15px;
+  height: 15px;
+  background: #800000;
+  border-radius: 50%;
+  position: absolute;
+  left: -38px;
+  top: 5px;
+}
+
+.dot.active {
+  background: black;
+}
+
+.label {
+  font-size: 18px;
 }
 
 /* CONTACT */
-.contact {
-  text-align: center;
+.card {
+  margin-top: 30px;
+  padding: 30px;
+  border: 1px solid #ddd;
+  max-width: 400px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero h1 {font-size: 50px;}
-  .panel h2 {font-size: 35px;}
+  .section {
+    padding: 40px 20px;
+  }
+
+  .nav {
+    padding: 20px;
+  }
 }
