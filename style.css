@@ -186,3 +186,27 @@ a {
     font-size: 12px;
   }
 }
+
+/* ================= CAREER 3D UPGRADE ================= */
+
+.step {
+  width: 160px;
+  padding: 15px;
+  background: linear-gradient(145deg, #5a1414, #a83232);
+  border-radius: 12px 12px 0 0;
+  text-align: center;
+  font-size: 14px;
+  transform: perspective(500px) rotateX(10deg);
+  box-shadow: 0 15px 25px rgba(0,0,0,0.6);
+  transition: transform 0.3s;
+}
+
+.step:hover {
+  transform: perspective(500px) rotateX(0deg) translateY(-10px);
+}
+
+/* DYNAMIC HEIGHT BASED ON YEARS */
+.step[data-years="9"] { height: 280px; }
+.step[data-years="3"] { height: 200px; }
+.step[data-years="2"] { height: 160px; }
+.step[data-years="1"] { height: 130px; }
