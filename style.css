@@ -139,16 +139,6 @@ a {
     background: linear-gradient(135deg, #5a1414, #a83232);
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
   }
-
-  /* REMOVE DESKTOP HEIGHTS */
-  .step:nth-child(1),
-  .step:nth-child(2),
-  .step:nth-child(3),
-  .step:nth-child(4),
-  .step:nth-child(5) {
-    height: auto !important;
-  }
-
   /* PRODUCTS → CLEAN GRID */
   .shelf {
     display: grid;
