@@ -69,95 +69,119 @@ a {
   text-decoration: none;
 }
 
-/* ================= MOBILE RESPONSIVE ================= */
+/* ================= MOBILE UI (COMPLETE FIX) ================= */
 
 @media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
 
   /* NAVBAR */
   nav {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    justify-content: center;
+    gap: 8px;
     padding: 10px;
   }
 
   nav a {
-    margin: 5px 10px;
-    font-size: 14px;
+    font-size: 13px;
+    padding: 5px 8px;
   }
 
   /* SECTIONS */
   section {
-    padding: 100px 20px;
+    padding: 90px 20px 60px;
+    min-height: auto;
   }
 
-  /* HOME TEXT */
+  /* HOME */
+  .home {
+    align-items: center;
+    text-align: center;
+  }
+
   .home h1 {
     font-size: 2rem;
-    text-align: center;
+    line-height: 1.2;
   }
 
   .home h2 {
-    font-size: 1.2rem;
-    text-align: center;
+    font-size: 1.1rem;
+    margin-top: 10px;
   }
 
   .home p {
-    text-align: center;
     font-size: 14px;
+    line-height: 1.6;
+    margin-top: 15px;
   }
 
-  /* CAREER STAIRCASE → STACKED */
- /* CAREER SECTION FIX */
-.steps {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 15px;
-}
+  /* CAREER → CARD TIMELINE */
+  .steps {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
 
-.step {
-  width: 100%;
-  max-width: 320px;
-  height: auto !important;
-  padding: 15px;
-  text-align: center;
-  border-radius: 10px;
-  background: linear-gradient(#5a1414, #a83232);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
-}
+  .step {
+    width: 100%;
+    max-width: 320px;
+    height: auto !important;
+    padding: 18px;
+    font-size: 14px;
+    border-radius: 12px;
+    text-align: center;
+    background: linear-gradient(135deg, #5a1414, #a83232);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+  }
 
-/* Remove staircase heights on mobile */
-.step:nth-child(1),
-.step:nth-child(2),
-.step:nth-child(3),
-.step:nth-child(4),
-.step:nth-child(5) {
-  height: auto !important;
-}
+  /* REMOVE DESKTOP HEIGHTS */
+  .step:nth-child(1),
+  .step:nth-child(2),
+  .step:nth-child(3),
+  .step:nth-child(4),
+  .step:nth-child(5) {
+    height: auto !important;
+  }
 
-  /* PRODUCT SHELF → GRID */
+  /* PRODUCTS → CLEAN GRID */
   .shelf {
-    flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
   }
 
   .company {
-    width: 45%;
-    height: 180px;
+    width: 100%;
+    height: 160px;
+    border-radius: 12px;
   }
 
   .company img {
-    width: 80px;
+    width: 70px;
+  }
+
+  .company span {
+    font-size: 14px;
   }
 
   /* CONTACT */
-  .contact p {
-    font-size: 14px;
+  .contact {
     text-align: center;
   }
 
+  .contact p {
+    font-size: 14px;
+    margin: 8px 0;
+  }
+
+  /* FOOTER */
   footer {
     font-size: 12px;
   }
