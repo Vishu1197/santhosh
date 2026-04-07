@@ -68,3 +68,80 @@ a {
   color: #ff4d4d;
   text-decoration: none;
 }
+
+/* ================= MOBILE RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  /* NAVBAR */
+  nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    padding: 10px;
+  }
+
+  nav a {
+    margin: 5px 10px;
+    font-size: 14px;
+  }
+
+  /* SECTIONS */
+  section {
+    padding: 100px 20px;
+  }
+
+  /* HOME TEXT */
+  .home h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .home h2 {
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  .home p {
+    text-align: center;
+    font-size: 14px;
+  }
+
+  /* CAREER STAIRCASE → STACKED */
+  .steps {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .step {
+    width: 90%;
+    height: auto !important;
+    margin-bottom: 15px;
+  }
+
+  /* PRODUCT SHELF → GRID */
+  .shelf {
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+  .company {
+    width: 45%;
+    height: 180px;
+  }
+
+  .company img {
+    width: 80px;
+  }
+
+  /* CONTACT */
+  .contact p {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  footer {
+    font-size: 12px;
+  }
+}
